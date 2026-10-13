@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SlimPDF：Windows 本地 PDF 目标大小压缩工具，文件在本机处理。当前为免费测试版 beta-20261013，招募试用与反馈。">
+  <title>SlimPDF — Windows 本地 PDF 压缩工具（免费测试版）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <p class="brand">SlimPDF <span class="brand-note">by YanYan</span></p>
+      <p class="badge">免费测试版 beta-20261013</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap">
+      <h1>试着缩小 PDF，文件留在本机处理。</h1>
+      <p class="lede">SlimPDF 是一个 Windows 本地运行的 PDF 目标大小压缩工具：你指定每份文件的目标大小，它在本机处理并把结果另存为副本，原文件保留，也无需安装 Python。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads/releases/tag/beta-20261013">下载 Windows 测试版</a>
+        <a class="btn btn-secondary" href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads/issues/new?template=feedback.md">反馈使用结果</a>
+      </div>
+      <p class="cta-hint">
+        <a href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads/releases/download/beta-20261013/SlimPDF-beta-20261013-win-x64.zip">程序 ZIP 直链</a> ·
+        <a href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads">项目说明与许可</a>
+      </p>
+      <p class="fine-print">测试版通过 GitHub 下载；国内普通网络的可达性仍待实测。</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="s-fits">
+      <h2 id="s-fits">适合谁</h2>
+      <ul class="plain-list">
+        <li>希望缩小 PDF 体积、同时希望文件留在本机处理、不经过网页上传的人。</li>
+        <li>经常遇到邮件或系统附件大小限制，愿意尝试把 PDF 压到指定大小的人。</li>
+      </ul>
+      <p class="note">目标大小是“尝试达到”的目标，不保证每份 PDF 都能压到；提交前请自己检查输出文件。</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="s-limits">
+      <h2 id="s-limits">当前限制（请先读这部分）</h2>
+      <ul class="plain-list">
+        <li>目前是免费测试版 <strong>beta-20261013</strong>，仅在独立 Windows 11 x64 沙盒中验证过有限合成样本、许可启动流程和中文路径；Windows 10 及其他系统尚未独立验收。</li>
+        <li>压缩率因文档类型而异；背景与插图处理可能有损。“更强压缩”选项默认关闭。</li>
+        <li>受保护或无法处理的 PDF 会被跳过或报错；未达到目标大小时会如实显示，不会假装成功。</li>
+        <li>请务必保留原文件，并在使用前检查输出结果。</li>
+        <li>当前流程通过软件内的“添加文件”按钮选择 PDF，不支持从浏览器拖入文件，也没有网页上传服务。</li>
+      </ul>
+    </section>
+
+    <section class="wrap" aria-labelledby="s-steps">
+      <h2 id="s-steps">三步上手</h2>
+      <ol class="steps">
+        <li>
+          <h3>① 添加 PDF 并选输出位置</h3>
+          <p>完整解压后双击“启动.bat”，阅读并自行决定是否接受许可，然后在软件内点“添加文件”选择 PDF，并选定输出目录。</p>
+          <figure class="shot" data-awaiting="实际截图待补充：此处将展示添加文件与选择输出目录的界面（合成样本）。">
+            <img src="assets/step-1.png" alt="SlimPDF 界面：添加 PDF 文件并选择输出目录（合成样本截图）" loading="lazy">
+            <figcaption>合成图文示例：已添加 PDF，并选择输出目录。</figcaption>
+          </figure>
+        </li>
+        <li>
+          <h3>② 设目标并开始</h3>
+          <p>为每份文件设置目标大小，点击开始。软件会尝试达到目标大小，但不保证每份文件都能达标。</p>
+          <figure class="shot" data-awaiting="实际截图待补充：此处将展示设置目标大小并开始的界面（合成样本）。">
+            <img src="assets/step-2.png" alt="SlimPDF 界面：设置每份 PDF 的目标大小并开始压缩（合成样本截图）" loading="lazy">
+            <figcaption>设置每份目标 0.6 MB，保持更强压缩关闭，然后点击开始。</figcaption>
+          </figure>
+        </li>
+        <li>
+          <h3>③ 检查输出大小与结果</h3>
+          <p>查看输出大小与状态，打开结果文件检查内容是否符合预期。结束使用可运行“停止.bat”。</p>
+          <figure class="shot" data-awaiting="实际截图待补充：此处将展示输出大小与处理状态的界面（合成样本）。">
+            <img src="assets/step-3.png" alt="SlimPDF 界面：查看输出文件大小与处理状态（合成样本截图）" loading="lazy">
+            <figcaption>该合成样本实际结果：710.0 KB → 78.9 KB，目标 600.0 KB，压缩达标。</figcaption>
+          </figure>
+        </li>
+      </ol>
+      <p class="note">以上是公开测试包处理一个两页合成图文 PDF 的真实截图。图像处理可能有损；此结果不代表其他 PDF 的压缩率或达标保证。</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="s-feedback">
+      <h2 id="s-feedback">反馈方式</h2>
+      <p>试用后请到 <a href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads/issues/new?template=feedback.md">GitHub Issues 反馈页</a> 提交结果。反馈需要一个 GitHub 账号，且内容是公开的。</p>
+      <p>建议提供：测试版本号、Windows 版本、操作步骤、实际结果与预期结果、脱敏后的错误信息、可选的文件大小信息。</p>
+      <p class="note">为保护隐私，默认不要上传 PDF 原件、含私人信息的截图、完整文件路径或完整日志。下载量和 star 数不作为有效反馈。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>SlimPDF © YanYan · 免费测试版 beta-20261013</p>
+      <p>SlimPDF 的原创源码仓库为私有；所含第三方组件按各自许可证提供源码与材料，本产品整体并非开源软件。详见 <a href="https://github.com/yanbaobao010913-beep/SlimPDF-downloads">项目说明与许可</a>。</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

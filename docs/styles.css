@@ -1,0 +1,204 @@
+/* SlimPDF 测试说明页 —— 轻量、克制、中文优先 */
+:root {
+  --ink: #1f2430;
+  --ink-soft: #4a5262;
+  --paper: #faf9f6;
+  --card: #ffffff;
+  --line: #e3e0d8;
+  --accent: #2f5d50;
+  --accent-ink: #ffffff;
+  --focus: #b3541e;
+  --radius: 8px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", system-ui, sans-serif;
+  line-height: 1.75;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.wrap {
+  max-width: 44rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius);
+  z-index: 10;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0.75rem; }
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible,
+.btn:focus-visible,
+.skip-link:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.site-header {
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding-block: 0.9rem;
+}
+.brand {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.brand-note {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+.badge {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.1rem 0.7rem;
+  white-space: nowrap;
+}
+
+.hero { padding-block: 2.5rem 1.75rem; }
+.hero h1 {
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+  line-height: 1.35;
+  margin: 0 0 0.9rem;
+}
+.lede {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.3rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: #274f44; }
+.btn-secondary { background: var(--card); color: var(--accent); }
+.btn-secondary:hover { background: #f0efe9; }
+
+.cta-hint { font-size: 0.9rem; color: var(--ink-soft); margin: 0 0 0.35rem; }
+.fine-print { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+
+main section { padding-block: 1.1rem; }
+h2 {
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+}
+h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+
+.plain-list { padding-left: 1.3rem; margin: 0; }
+.plain-list li { margin-bottom: 0.5rem; }
+
+.note {
+  background: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 0.6rem 0.9rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+.steps > li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+.steps p { margin: 0; color: var(--ink-soft); }
+
+.shot {
+  margin: 0.9rem 0 0;
+}
+.shot img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f3f1ea;
+}
+.shot figcaption {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.35rem;
+}
+.shot.is-awaiting img,
+.shot.is-awaiting figcaption { display: none; }
+.shot.is-awaiting::before {
+  content: attr(data-awaiting);
+  display: block;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: #f3f1ea;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.site-footer {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.site-footer .wrap { padding-block: 1.25rem; }
+.site-footer p { margin: 0 0 0.4rem; }
+.site-footer p:last-child { margin-bottom: 0; }
+
+@media (max-width: 480px) {
+  .cta-row .btn { width: 100%; text-align: center; }
+  .header-inner { flex-direction: column; align-items: flex-start; }
+}

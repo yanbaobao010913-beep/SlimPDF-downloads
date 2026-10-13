@@ -31,3 +31,8 @@ Windows 本地 PDF 压缩工具。添加文件、选择输出目录、设置每�
 同一发布页提供`lxml-iconv-corresponding-sources-20261012.zip`及`pikepdf-10.16.0.tar.gz`，包含对应源码、许可和已验证的重建/替换说明。`SHA256SUMS.txt`用于核对附件是否完整。
 
 本仓仅存发布说明、许可文本和反馈模板。没有“任意PDF无损压到2MB”或“普遍领先竞品”的承诺；下载量也不代表已完成真实用户验证。
+
+
+## 测试说明与操作演示
+
+[查看 SlimPDF 测试说明页](https://yanbaobao010913-beep.github.io/SlimPDF-downloads/)：适用场景、已知限制、三步真实操作截图和反馈入口。截图使用合成样本，不能代表普遍压缩效果。
