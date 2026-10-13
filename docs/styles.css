@@ -187,6 +187,26 @@ h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
   padding: 1rem;
 }
 
+.demo { margin: 0.9rem 0 0; }
+.demo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #07090b;
+}
+.demo-video:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+.demo figcaption {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
 .site-footer {
   margin-top: 2.5rem;
   border-top: 1px solid var(--line);
